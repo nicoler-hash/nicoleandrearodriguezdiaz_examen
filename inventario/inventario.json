@@ -1,0 +1,51 @@
+{
+    "005": {
+        "nombre": "chocorramo",
+        "proveedor": "ramo",
+        "bodegas": {
+            "centro": 5,
+            "norte": 5
+        },
+        "movimientos": [
+            {
+                "tipo": "entrada",
+                "cantidad": 30,
+                "bodega": "centro",
+                "descripcion": "torta de chocolate",
+                "fecha": "2026-04-15 19:54"
+            },
+            {
+                "tipo": "salida",
+                "cantidad": 10,
+                "bodega": "centro",
+                "descripcion": "torta chocolate",
+                "fecha": "2026-04-15 19:55",
+                "id_transferencia": "1776300914.618955"
+            },
+            {
+                "tipo": "entrada",
+                "cantidad": 10,
+                "bodega": "norte",
+                "descripcion": "torta chocolate",
+                "fecha": "2026-04-15 19:55",
+                "id_transferencia": "1776300914.618955"
+            },
+            {
+                "tipo": "salida",
+                "cantidad": 5,
+                "bodega": "centro",
+                "descripcion": "torta chocolate",
+                "fecha": "2026-04-15 20:28",
+                "id_transferencia": "1776302884.565025"
+            },
+            {
+                "tipo": "entrada",
+                "cantidad": 5,
+                "bodega": "norte",
+                "descripcion": "torta chocolate",
+                "fecha": "2026-04-15 20:28",
+                "id_transferencia": "1776302884.565025"
+            }
+        ]
+    }
+}
