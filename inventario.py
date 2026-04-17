@@ -32,7 +32,6 @@ def registrar_producto():
 
     if codigo in inventario:
         print("ya existe el producto")
-        return
 
     inventario[codigo] = {
         "nombre": nombre,
@@ -54,7 +53,6 @@ def ingresar_producto():
 
         if codigo not in inventario:
             print("no existe el producto")
-            return
 
         cantidad = int(input("Cantidad: "))
 
@@ -73,7 +71,6 @@ def ingresar_producto():
             bodega = "oriente"
         else:
             print("bodega no valida")
-            return
 
         descripcion = input("descripcion: ")
         fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -110,7 +107,6 @@ def sacar_producto():
 
         if codigo not in inventario:
             print("no existe el producto:(")
-            return
 
         cantidad = int(input("Cantidad: "))
 
@@ -129,7 +125,6 @@ def sacar_producto():
             bodega = "oriente"
         else:
             print("bodega no valida")
-            return
 
         descripcion = input("Descripcion: ")
         fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -139,7 +134,6 @@ def sacar_producto():
 
         if cantidad > inventario[codigo]["bodegas"][bodega]:
             print("no hay suficiente stock")
-            return
 
         inventario[codigo]["bodegas"][bodega] -= cantidad
 
@@ -251,7 +245,6 @@ def transferencia():
     codigo = input("Codigo del producto: ")
     if codigo not in inventario:
         print("Producto no existe")
-        return
 
     bodegas_validas = ["norte", "centro", "oriente"]
 
@@ -260,17 +253,14 @@ def transferencia():
 
     if origen not in bodegas_validas or destino not in bodegas_validas:
         print("Bodega invalida")
-        return
 
     if origen == destino:
         print("No puedes transferir a la misma bodega")
-        return
 
     try:
         cantidad = int(input("Cantidad: "))
     except:
         print("Cantidad invalida ")
-        return
 
     descripcion = input("Descripcion: ")
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -285,7 +275,6 @@ def transferencia():
     
     if producto["bodegas"][origen] < cantidad:
         print("Stock insuficiente")
-        return
 
     
     id_transferencia = str(datetime.now().timestamp())
